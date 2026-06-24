@@ -58,9 +58,9 @@ This separation ensures:
 
 ## 📸 Screenshots
 
-![Calculator Main](screenshots/calculator-main.png.png)
-![Calculator Example](screenshots/calculator-example.png.png)
-![Calculator Result](screenshots/Calculator-result.png.png)
+![Calculator Main](screenshots/calculator-main.png)
+![Calculator Example](screenshots/calculator-example.png)
+![Calculator Result](screenshots/Calculator-result.png)
 
 See the [`screenshots/`](screenshots/) folder for more details.
 
@@ -165,53 +165,7 @@ mvn test
 - ⏱️ **Keyboard Shortcuts** – Alt+C for clear, Enter for equals
 - 📱 **Responsive UI** – Dynamic scaling for different screen sizes
 
----
 
-## 🎓 Interview Preparation Guide
-
-### Common Questions & Answers
-
-**Q: How does the calculator separate UI and business logic?**
-- A: The `CalculatorFrame` class handles only display and user input events, while `CalculatorEngine` manages all calculation logic. This allows the engine to be tested independently and reused in other UIs (web, mobile, etc.).
-
-**Q: How does the calculator maintain operator precedence?**
-- A: The `compute()` method uses a two-pass algorithm:
-  1. First pass: Execute all `*` and `/` operations, replacing them with results
-  2. Second pass: Execute remaining `+` and `−` operations left-to-right
-  - Example: `2 + 3 × 4` → `2 + 12` → `14` ✅
-
-**Q: How do you handle invalid input?**
-- A: Multiple layers of validation:
-  - Empty expressions are ignored
-  - Operators at the start are handled (allow unary minus: `-5`)
-  - Consecutive operators are replaced (last one wins)
-  - Trailing operators are stripped before evaluation
-  - Invalid results throw `IllegalArgumentException`, caught by the UI
-
-**Q: Why choose Swing over other GUI frameworks?**
-- A: Swing is ideal for this project because:
-  - Built-in to Java (no external dependencies)
-  - Cross-platform compatibility (Windows, Mac, Linux)
-  - Suitable for campus placement portfolios
-  - Demonstrates understanding of event-driven programming
-  - For modern applications, I'd consider JavaFX or web frameworks
-
-**Q: How would you extend this project?**
-- A: Possible extensions:
-  1. Add keyboard input listeners
-  2. Implement a stack-based RPN (Reverse Polish Notation) mode
-  3. Create a calculator plugin system for custom operations
-  4. Build a web version using Spring Boot + React
-  5. Add unit conversion (temperature, distance, etc.)
-
-**Q: What testing strategy did you use?**
-- A: Boundary testing and equivalence partitioning:
-  - Basic operations: `7+3=10`
-  - Operator precedence: `2+3×4=14`
-  - Decimal handling: `1.5+2.5=4`
-  - Edge cases: empty input, consecutive operators
-
----
 
 ## 📝 Code Example
 
@@ -248,9 +202,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👤 Author
 
-Built as a demonstration of clean coding practices and software architecture principles.
-
-**Contact:** [Your Email/Portfolio]
+Built as a demonstration of clean coding practices and software architecture principles.]
 
 ---
 
